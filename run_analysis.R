@@ -69,4 +69,4 @@ mean_std[,"activity"] <- activity_labels[match(mean_std[,"activity"], activity_l
 averages <- mean_std %>% group_by(activity,subject) %>% summarise_each(funs(mean))
    ### examine the result
    #averages[1:5,1:5]
-write.table(averages, file="run_analysis_tidy_data.csv")
+write.table(averages, file="run_analysis_tidy_data.txt", row.name=FALSE)
