@@ -30,8 +30,8 @@ Step 0)  "Download and read the data files"
 I chose to leave the file download and all of the data loading in the script.  
 To save a bit of runtime, the download is skipped when the zip file already exists.
 The "Inertial Data" data is not used here.
-The "set" designations (train/test) and the "train_subjects" files are added to the data on the left side.
-The results are:
+The "set" designations (train/test) and the "train_subjects" files are added to the data on the left side of the data frame.
+The resulting tables are:
 - activity_labels
 - features
 - train
@@ -70,12 +70,12 @@ They were applied here to more closely follow the order of the instructions.
 Step 5) "From the data set in step 4, create a second, independent tidy data set 
        with the average of each variable for each activity and each subject."
 No missing or corrupted data values were encountered, so there is no handling code.
-The result is the data frame "averages", and the data file "run_analysus_tidy_data.csv".
+The result is the data frame "averages", and the data file "run_analysis_tidy_data.csv".
 
 What makes this data set tidy?
-- Each variable (averages of the means and standard deviations) is in an individual column.
-- Each observation (activity x subject) is in an individual row.
-- There are many variables in this table, which might be considered not tidy.  They could be put into separate tables.  I consider this single table format to be easy to use for this result.
+- Each variable (representing averages of the means and standard deviations) is in an individual column.
+- Each observation (activity + subject) is in an individual row.
+- There are many variables in this table. That might be considered not tidy.  They could be put into separate tables.  I consider this single table format to be easy to use for this result.
 - Column names indicate the variable names.
 - The "activity" codes have been converted to more readable labels.
 - The data is written to a single file (per table, since it is a single table).
